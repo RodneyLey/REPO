@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
   <title>Canadian Provinces API Documentation</title>
+
 </head>
 <body>
   <header>
@@ -15,7 +16,7 @@
     <section id="introduction">
       <h2>Introduction</h2>
       <p>
-        Welcome to the Canadian Provinces API documentation. This API provides information about the provinces of Canada.
+        Welcome to the Canadian Provinces API documentation. This API provides information about the provinces of Canada, including details about each province and the option to retrieve information for all provinces.
       </p>
     </section>
 
@@ -36,7 +37,7 @@
       <p>Here are some examples of how to use the API:</p>
 
       <pre>
-        <code>
+        <code class="javascript">
 fetch('/provinces')
   .then(response => response.json())
   .then(data => console.log(data))
@@ -47,10 +48,10 @@ fetch('/provinces')
 
     <section id="specific-province">
       <h2>Get Information for a Specific Province</h2>
-      <p>Enter a province URL and click the "Get Data" button:</p>
+      <p>Enter a province name and click the "Get Data" button:</p>
 
-      <label for="provinceInput">Province URL:</label>
-      <input type="text" id="provinceInput" placeholder="Enter province URL">
+      <label for="provinceInput">Province Name:</label>
+      <input type="text" id="provinceInput" placeholder="Enter province name">
 
       <button id="getDataButton">Get Data</button>
 
@@ -59,12 +60,11 @@ fetch('/provinces')
       </div>
     </section>
 
-    <!-- New section for all provinces -->
     <section id="all-provinces">
       <h2>Get All Provinces</h2>
       <p>Click the link below to get information about all Canadian provinces:</p>
 
-      <a href="https://aqpotz9zm3.execute-api.ca-central-1.amazonaws.com/provinces" target="_blank" id="getAllProvincesLink">Get All Provinces</a>
+      <a target="_blank" href="https://aqpotz9zm3.execute-api.ca-central-1.amazonaws.com/Production/provinces" id="getAllProvincesLink"> Get All Provinces</a>
     </section>
 
     <section id="response">
@@ -72,7 +72,7 @@ fetch('/provinces')
       <p>The API returns a JSON object with the following structure:</p>
 
       <pre>
-        <code id="responseCode">
+        <code id="responseCode" class="json">
 {
   "provinces": [
     // Example province object
@@ -81,7 +81,7 @@ fetch('/provinces')
       "abbreviation": "AB",
       "capital": "Edmonton",
       "population": 4421876,
-      "image": "https://example.com/alberta.jpg",
+      "image": "https://github.com/RodneyLey/REPO/blob/main/Assignment_04/Alberta.jpg?raw=true",
       "randomFact": "Alberta is home to the famous Banff National Park, one of the oldest national parks in the world."
     },
     // Add more province objects as needed
