@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const getDataButton = document.getElementById('getDataButton');
     const provinceInput = document.getElementById('provinceInput');
     const resultContainer = document.getElementById('resultContainer');
-    const getAllProvincesLink = document.getElementById('getAllProvincesLink');
+    //const getAllProvincesLink = document.getElementById('getAllProvincesLink');
   
     getDataButton.addEventListener('click', function () {
       const provinceName = provinceInput.value.trim();
@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   
-    getAllProvincesLink.addEventListener('click', function (event) {
-      // Prevent the default link behavior
-      event.preventDefault();
+    // getAllProvincesLink.addEventListener('click', function (event) {
+    //   // Prevent the default link behavior
+    //   event.preventDefault();
   
       // Call the API to get information for all provinces
       fetch('/provinces')
