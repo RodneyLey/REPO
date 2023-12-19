@@ -47,9 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
               console.error('Error:', error);
               resultContainer.textContent = 'An error occurred. Please try again.';
           });
-          .catch(error => {
-            console.error('Fetch Error:', error);
-            resultContainer.textContent = `An error occurred: ${error.message}`;
-        });
+        
   });
 });
